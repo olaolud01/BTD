@@ -1,0 +1,87 @@
+
+Testing Writeup:
+
+M2:
+Pranav:
+Tested Welcome Screen button to make sure it took the user to the Initial Configuration Screen. The test clicks on the "Click to Start" button and verifies the next page is the Configuration Screen page.
+
+Eric:
+Tested the Player constructor with two arguments, Name and Level. The test ensures that the Player is not equal to null and then goes attribute by attribute to ensure that the Player's attributes are what is expected (name, level, money, and monument health).
+
+Spancer:
+Tested Player one-argument constructor (just Name). This test ensures that the one-arg constructor for Player works like expected and has all the expected attributes, such as name, level, money, and monument health. Since the one-arg constructor does not have an option to set the Level, it is automatically set to Easy, so the test checks that the parameters are set accocrdingly.
+
+Laolu:
+Tested Player constructor and controller to make sure they work together as expected. First created a Player using the two-argument constructor and made sure all the attributes were set accordingly. Then created a Controller object and called its createPlayer method to create a Player that way. Went through the same process of checking the Player's attributes but did so through the Controller object and its getPlayer() method.
+
+
+
+M4:
+Pranav:
+-Tested "Start New Game" button to make sure it takes user back to Welcome Screen. The test manually ends the game and selects "Start New Game" and verifies the next page is the Welcome Screen.
+
+-Tested to make sure Game Over Screen has both a "Start New Game" button and a "End Game" button. The test manually end the game and verifies "Start New Game" and "End Game" exist
+
+
+Eric:
+-Tests the application to see if the monument gets sufficiently damaged on Easy mode and updates monument health correctly. The test lets one round of the game play and checks the monument health upon completion.
+
+-Tests the Close Game button to ensure that the game exits properly. The test checks to see if controller and player are equal to null.
+
+
+Laolu:
+-Tests the Start Combat button. The test starts a mock game and ensures that the Start Combat button appears correctly when the Game Screen comes up.
+
+-Tests the application to ensure that, upon restarting the game, the resulting game is correct. The test goes through the process of creating a game, ends it, then clicks the Start New Game button. Once the new game is started, the test goes through the same process again and makes sure that the resulting Game Screen comes up properly.
+
+
+Spencer:
+-Tests the end game logic. Runs a sample game and waits until the game is completed (by allowing monument to die) then makes sure that the End Game screen is pulled up correctly.
+
+-Tests purchasing a tower while a game is active. The test runs a sample game, buys a heavy tower while the game is running, and ensures that the tower has been bought by checking the resulting money that Player has.
+
+
+M5:
+
+Pranav:
+-Tested money gain implementation. The test starts an easy game and buys a heavy tower that kills the light enemies and makes sure money is gained.
+
+-Tested tower attacking enemies. The test starts a game and buys a heavy tower and makes sure the enemies are killed.
+
+Eric:
+- Tests that money is incremented properly after a heavy tower is bought and enemies are killed. Test starts a hard game, buys a heavy tower, waits, and checks the updated money amount.
+
+- Tests monument damage implementation. Test starts a game in easy mode, waits for the game to run, and for the enemies to reach the monument. Checks that monument health is properly decremented.
+
+Laolu:
+- Tests proper updating of monument health. Test starts a game in intermediate mode, waits for the game to run and for the enemies to reach the monument. Checks that the game ends because the monument health has reached 0.
+
+- Tests that the buy tower implementation is correct after a round ends. Test starts a game, ends it, starts another game, starts combat, then buys a heavy tower and ensures that the tower has been properly purchased.
+
+Spencer:
+- Tests money gain implementation in the intermediate level. The test starts an intermediate game and buys a heavy tower that kills enemies and makes sure money is properly gained.
+
+- Tests proper updating of monument health for a level in hard mode. Test starts a game in hard mode, waits for the game to run and for the enemies to reach the monument. Checks that monument health reaches 0 and that the game ends when this happens.
+
+
+M6:
+
+Pranav:
+- Tests upgrading a light tower. Test starts a game on Easy mode and verifies the upgrade of the already existing light tower to a medium tower.
+
+- Tests statistics appearing on end game screen. Test starts a game, ends it, and makes sure statistics appear on the end game screen.
+
+Spencer:
+- Tests upgrading a medium tower. Test starts a game on Easy mode, buys a medium tower, and verifies the upgrade of the medium tower to a heavy tower.
+
+- Tests that only one tower gets upgraded at a time. Test starts a game on Easy mode, buys a light tower, and verifies that only one tower gets upgraded when the option is selected.
+
+Laolu:
+- Tests the final boss destroying the monument. Test starts a game on Easy mode, waits for the final boss to show up and lets it destroy the monument and verifies the end game screen appears
+
+- Tests the win screen appearing after final boss is killed. Test starts a game on Easy mode, buys a couple of heavy towers, waits for the final boss to show up and then kills it, verifying the win screen appears.
+
+Eric: 
+- Tests that statistics appear on win screen. Test starts a game on Easy mode, buys a couple of heavy towers, waits for the final boss to show up and then kills it, verifying the win screen appears with statistics.
+
+- Tests that you can start a new game from win screen. Test starts a game on Easy mode, buys a couple of heavy towers, waits for the final boss to show up and then kills it, verifying you can start a new game from win screen.
